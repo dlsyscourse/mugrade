@@ -57,7 +57,7 @@ def submit_test():
 def publish(func_name):
     """ Publish an autograder. """
     global _values
-    response = requests.post(server_url + "publish_grader",
+    response = requests.post(_server_url + "publish_grader",
                              params = {"user_key": os.environ["MUGRADE_KEY"],
                                        "func_name": func_name,
                                        "target_values": b64_pickle(_values),
