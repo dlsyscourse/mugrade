@@ -68,7 +68,7 @@ def publish(func_name):
         print(response.json()["status"])
 
 
-@pytest.mark.hookwrapper
+@pytest.hookimpl(hookwrapper=True)
 def pytest_pyfunc_call(pyfuncitem):
     ## prior to test, initialize submission
     global _values, _submission_key, _errors
