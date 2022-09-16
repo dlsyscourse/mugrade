@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="mugrade",
-    version="1.1",
+    version="1.2",
     author="Zico Kolter",
     author_email="zkolter@cs.cmu.edu",
     packages=find_packages(),
