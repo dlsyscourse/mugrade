@@ -32,7 +32,7 @@ def get_server_url_protocol(key):
     """ Maintain legacy pickle protocol temporarily before phasing out. """
     server_urls = [
        {"prefix":"_", "url":"https://mugrade-online.dlsyscourse.org/_/api/", "protocol":"json"},
-        {"prefix":None, "url":"https://mugrade.dlsyscourse.org/_/api/", "protocol":"pickle"}
+        {"prefix":None, "url":"https://mugrade.dlsyscourse.org/_/api/", "protocol":"json"}
     ]
 
     """ Hacky yet simple way to differentiate servers via key prefix """
