@@ -1,16 +1,7 @@
 import os
-import sys
 import numpy as np
 import requests
-import json
-import inspect
-import copy
-import gzip
-import re
-import types
 import pytest
-import base64
-import pickle
 import datetime
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
