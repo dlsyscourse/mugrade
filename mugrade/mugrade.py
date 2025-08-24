@@ -68,7 +68,7 @@ def submit_test():
     if response.status_code != 200:
         print(f"Error : {response.text}")
     elif not response.json()["correct"]:
-        print(f"Grader test {len(_values)} failed: {response.json()['status']}")
+        print(f"Grader test {len(_values)} failed")
         _errors += 1
     else:
         print(f"Grader test {len(_values)} passed")
