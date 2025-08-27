@@ -15,7 +15,10 @@ a class while still being able to use pytest hooks, so this is the hacky solutio
 _values = []
 _submission_id = ""
 _errors = 0
-_server_url = "https://api.mugrade.org/"
+# Allow overriding the default server via environment variable
+_server_url = os.environ.get("MUGRADE_SERVER", "https://api.mugrade.org/")
+if not _server_url.endswith('/'):
+    _server_url += '/'
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
@@ -122,5 +125,4 @@ def submit(result):
     _values.append(result)
     if os.environ["MUGRADE_OP"] == "submit":
         submit_test()
-
 
